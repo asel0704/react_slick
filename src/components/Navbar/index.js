@@ -1,35 +1,24 @@
 import React from "react";
-import { Navbar, Nav, Container, Form, FormControl } from "react-bootstrap";
+import { Navbar,Container} from "react-bootstrap";
 import { NavWrapper } from "./style";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
 
 export default function Navbars() {
   return (
     <NavWrapper>
-      <Container>
+        <Container>
         <Navbar expand="lg">
           <Link to="/">
-            <img src="/image/logo.svg" />
+            <img src="https://i.pinimg.com/736x/73/4a/b0/734ab039f0b24c42c5392cb57817ecec.jpg" style={{
+              width:'180px',
+              height:'110px',
+              borderRadius:'150%',
+              display: 'block',
+              marginLeft:'450px'
+              }}/>
           </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav dark" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Form inline>
-              <FaSearch />
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-            </Form>
-            <Nav className="ml-auto">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-              <Link to="/movies" className="nav-link">
-                TV show
-              </Link>
-            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </Container>

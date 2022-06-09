@@ -2,14 +2,14 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect
+  Route  
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const HomePage = React.lazy(() => import("./components/HomePage"));
 const SingleMoviePage = React.lazy(() => import("./components/singlePage"));
+
 function App() {
   return (
     <Router>
@@ -17,7 +17,7 @@ function App() {
       <React.Suspense fallback={"loading  ....."}>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/movies/:id" component={SingleMoviePage} />
+          <Route path="/movie/:id" component={SingleMoviePage} />
         </Switch>
       </React.Suspense>
     </Router>
